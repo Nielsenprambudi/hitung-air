@@ -35,3 +35,7 @@ npm run dev
 ```
 
 Buka `http://localhost:3000`.
+
+## Dokumentasi Firestore
+
+Lihat [`FIRESTORE.md`](./FIRESTORE.md) untuk detail struktur koleksi, tipe data setiap field, contoh dokumen, dan rekomendasi security rules.
