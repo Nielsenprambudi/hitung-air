@@ -116,7 +116,8 @@ export default function Home() {
 
       setCubicMeter("");
       setLiter("");
-    } catch {
+    } catch (error) {
+      console.error(error);
       setErrorMessage("Gagal menyimpan pencatatan.");
     } finally {
       setIsSaving(false);
