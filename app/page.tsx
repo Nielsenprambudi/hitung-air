@@ -30,7 +30,10 @@ const currentTime = now.toTimeString().slice(0, 5);
 // Helper to get the calculation month for a given date (10th to 9th)
 // If date is >= 10, it's the current month. If < 10, it's the previous month.
 const getCalculationMonth = (dateStr: string) => {
+  if (!dateStr) return "";
   const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return "";
+  
   if (d.getDate() < 10) {
     d.setMonth(d.getMonth() - 1);
   }
@@ -76,6 +79,9 @@ export default function Home() {
       }));
 
       setRecords(nextRecords);
+    }, (error) => {
+      console.error("Firestore error:", error);
+      setErrorMessage("Gagal mengambil data dari database. Pastikan Index Firestore sudah dibuat.");
     });
 
     return () => unsubscribe();
