@@ -65,8 +65,7 @@ export default function Home() {
 
     const recordsQuery = query(
       collection(db, "water-records"),
-      orderBy("date", "desc"),
-      orderBy("time", "desc")
+      orderBy("createdAt", "desc")
     );
 
     const unsubscribe = onSnapshot(recordsQuery, (snapshot) => {
