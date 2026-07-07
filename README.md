@@ -8,6 +8,7 @@ Website Next.js untuk pencatatan penggunaan air dan perhitungan rata-rata pengel
 - Dashboard perhitungan bulanan (total dan rata-rata)
 - Toggle unit perhitungan: liter / meter kubik
 - Data pencatatan disimpan ke Firebase Firestore (`water-records`)
+- Rumus perhitungan terdokumentasi di [`RUMUS.md`](./RUMUS.md)
 
 ## Menjalankan proyek
 
@@ -39,3 +40,5 @@ Buka `http://localhost:3000`.
 ## Dokumentasi Firestore
 
 Lihat [`FIRESTORE.md`](./FIRESTORE.md) untuk detail struktur koleksi, tipe data setiap field, contoh dokumen, dan rekomendasi security rules.
+
+Lihat [`RUMUS.md`](./RUMUS.md) untuk penjelasan detail mengenai rumus konversi dan logika perhitungan yang digunakan.
